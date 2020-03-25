@@ -22,7 +22,7 @@ public class Main extends Application{
         GridPane gridPane = new GridPane();
         HBox bottomButton = new HBox();
         MyHandler myHandler = new MyHandler();
-        System.out.println("Walls:Blue    Path:Brown    Entry:Green    Exit:Red");
+        System.out.println("Walls:Blue    Path:White    Entry:Green    Exit:Red");
         System.out.print("What is N, the dimension of the grid (NxN)?:");
         String in = x.nextLine();
         if (in.isEmpty()) {
@@ -42,7 +42,7 @@ public class Main extends Application{
             }
         }
 
-        Scene newscene = new Scene(borderPane, 350, 350);
+        Scene newscene = new Scene(borderPane, 450, 450);
         primaryStage.setTitle("Maze Builder");
         gridPane.setAlignment(Pos.CENTER);
         bottomButton.setAlignment(Pos.CENTER);
@@ -84,22 +84,20 @@ public class Main extends Application{
             else if (A.getText().equals("Exit")) {
                 System.exit(0);
             }
-            else {
+            else { //a maze button was clicked
                 char val = getColorChar(A);
-                if (val == '0') {
+                if (val == '0') {  //the button is currently blue so change it to white
                     A.setStyle("-fx-background-color: white;");
                 }
-                //PATH
                 else if (val == '1') {
-                    A.setStyle("-fx-background-color: #806f61; -fx-border-width: 2px; -fx-border-color: grey;");
+                    A.setStyle("-fx-background-color: green; -fx-border-width: 2px; -fx-border-color: grey;");
                 }
-                //ENTRY
-                else if (val == '2') {
-                    A.setStyle("-fx-background-color: #00ff07; -fx-border-width: 2px; -fx-border-color: grey;");
+                else if (val == 'S') {
+                    A.setStyle("-fx-background-color: #ff00ba; -fx-border-width: 2px; -fx-border-color: grey;");
                 }
-                //EXIT
+                //Exit
                 else {
-                    A.setStyle("-fx-background-color: #ff0002; -fx-border-width: 2px; -fx-border-color: grey;");
+                    A.setStyle("-fx-background-color: #ff001e; -fx-border-width: 2px; -fx-border-color: grey;");
                 }
             }
         }
