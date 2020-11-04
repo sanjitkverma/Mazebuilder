@@ -42,5 +42,4 @@ Your application should provide Save and Exit commands. The Save command should 
 
 You are free to use the four colors of your choice in the maze: walls, path, entry and exit. When a user clicks a tile/button, it should toggle from wall to path to entry to exit and then back to wall on successive clicks. You do not have to error check your maze (e.g. making sure that there is only one entry and exit). Again, all tiles on the maze edges should be walls except the entry and exit squares.
 
-### Stage
 
