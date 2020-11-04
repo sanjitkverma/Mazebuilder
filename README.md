@@ -1,8 +1,5 @@
 # Maze Builder
-
-### This is a lab for COMP 167 Computer Program Design at North Carolina A&T State University.
-
-### Instructor: Professor Karen Schnell - klschnell@ncat.edu
+In this lab I create a program that can create random mazes using java. The user can specify maze dimensions, has entery/exits points and can change colors when clicked on to build the maze.
 
 ### Lab Description
 A maze consists of a series of walls and paths with an entrance and exit. We can represent a maze with zeros and ones where a zero indicates a position/tile in the maze containing a wall and a one represents part of the walkable pathway. The maze has a single entry point and a single exit point represented by the characters 'S' and 'E' respectively. You are going to write an application that will facilitate the creation of new mazes graphically. The user will first specify the maze dimensions (e.g. 25 x 25) and you will present an initial board containing a matrix of buttons matching the dimensions of the maze. The user can then click the buttons/tiles and change the color from the wall color to the path color. Once the maze is complete, the user can then save the maze to a file containing zeros, ones and the entry and exit characters. The following shows a 10x10 maze along with its text file representation.
@@ -47,10 +44,3 @@ You are free to use the four colors of your choice in the maze: walls, path, ent
 
 ### Stage
 
-_Basic Maze_ (10 points) - Shows the Stage with a Scene containing a BorderPane. The center zone of the BorderPane will contain a n x n GridPane. Each cell of the GridPane will contain a Button. The bottom zone of the BorderPane will conain an HBox. Add the “Save” and “Exit” buttons to the HBox and set the alignment so that the buttons are centered. Make sure your maze buttons are created with their backgrounds set to the wall background color (blue is the color I used for walls).
-
-_Basic Maze Interactive_ (4 point) - The user can click the tiles and they will toggle between the four maze colors. Code will be provided to handle the events related to the mouse clicks.
-
-_Save Maze_ (3 point) - Your Stage displays the basic maze plus a second panel containing the Save and Exit buttons. Clicking the Save button will save your maze to a file. The Save operation basically traverses your 2D array of buttons and outputs a 0, 1 , 'S' or 'E' depending on the color of the button/tile. The listener code included with this assignment has examples of how to determine the Color of a Button. The output file should be chosen by the user with a [JavaFX FileChooser](http://tutorials.jenkov.com/javafx/filechooser.html).
-
-_Exit Maze_ (3 point)- Clicking the Exit button should present the user the option to save (using the JavaFX Dialog) then exit the application using `System.exit(0)`.
